@@ -1,4 +1,4 @@
-from datetime import date
+from datetime import date, datetime
 
 class HouseInfo:
     def __init__(self,data):
@@ -19,7 +19,7 @@ class HouseInfo:
         field_data=[]
 
         for record in self.data:
-            if strftime(rec_date,"%m/%d/%y") == strftime(record['date'],"%m/%d/%y"):
-                field_data.append(record[date])
+            if rec_date.strftime("%m/%d/%y") == record['date']:
+                field_data.append(record[field])
 
         return field_data
