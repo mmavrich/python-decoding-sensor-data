@@ -30,5 +30,5 @@ class EnergyData(HouseInfo):
         for rec in data:
             total_energy += (rec*self.ENERGY_PER_BULB)
             '''
-        total_energy = sum([fields * self.ENERGY_PER_BULB for field in data])
+        total_energy = sum([field * self.ENERGY_PER_BULB for field in data])
         return total_energy
